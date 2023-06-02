@@ -1,0 +1,23 @@
+interface Entity {
+    id: ID!
+    title: String!
+    author: String!
+}
+
+type Post implements Entity {
+    id: ID!
+    title: String!
+    author: String!
+    url: String!
+}
+
+type Book implements Entity {
+    id: ID!
+    title: String!
+    author: String!
+    ISBN: String!
+}
+
+type Query {
+    catalog: [Entity]
+}
